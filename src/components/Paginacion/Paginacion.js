@@ -21,11 +21,7 @@ export const Paginacion = ({page, total_pages}) => {
             </ul> 
 
 
-        </nav>
-
-
-
-        
+        </nav>       
 
     )
 
