@@ -1,13 +1,13 @@
 import {useEffect, useState} from "react"
 import MovieCard from "../../components/MovieCard/MovieCard";
 import styles from "./MovieList.module.css";
-import { get } from "../../utils/httpClient";
+import { get } from "../../firebase/httpClient";
 import { Search } from "../../components/Search/Search";
 import { Spinner } from "../../components/Spinner/Spinner";
 import { useQuery } from "../../hooks/useQuery";
 import ReactPaginate from "react-paginate";
 
-export default function MoviesList() {
+export function MoviesList() {
     const [movies, setMovies] = useState([]);
     const [pageCount, setPageCount] = useState(1);
     const [isLoading, setIsLoading] = useState(true);
