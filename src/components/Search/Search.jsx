@@ -29,6 +29,7 @@ return (
         className={styles.searchInput}
         type="text"
         value={searchText}
+        placeholder='Buscar pelicula'
         onChange={(event) => setSearchText(event.target.value)}
         
         />
@@ -41,3 +42,5 @@ return (
     </form>
 );
 }
+
+export default Search;
