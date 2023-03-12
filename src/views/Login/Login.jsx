@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider} from "firebase/auth";
 import { auth } from "../../../src/firebase/firebaseConfig";
 import { useNavigate } from "react-router-dom";
-import { useCallback } from 'react'
-import './Login.css'
+import { useCallback } from 'react';
+import './Login.css';
+import { Link } from 'react-router-dom';
+import GoogleLogo from '../../img/Google-logo.png'
 
 
 export const Login = () => {
@@ -28,16 +30,16 @@ export const Login = () => {
       <br></br>
       <body className="square">
       <div className="headboard">
-        <h3>MetroPelis</h3>
-        <h4>Login</h4>
+        <h1>Bienvenido a METROPELIS</h1>
+        <Link id='Link' to='/register'>¿No tienes una cuenta? Registrate</Link>
       </div>
       <div className="headboard">
       <form id="form" onSubmit={handleSubmit}>
           <div>
-          <input name="email" placeholder="correo" type="email" />
+          <input className="input" name="email" placeholder="correo" type="email" />
           </div>
           <div>
-          <input name="password" placeholder="contraseña" type="password" />
+          <input className="input" name="password" placeholder="contraseña" type="password" />
           </div>
           <div>
           <button type="submit" className='boton'>Login</button>
@@ -45,10 +47,7 @@ export const Login = () => {
       </form>
       </div>
       <div className="headboard">
-      <button className='boton'> Google </button>
-      </div>
-      <div className="headboard">
-      <button className='boton'onClick={()=>navigate('/register')} > Registro </button>
+      <button id="botongoogle"><img id='imggoogle' src={GoogleLogo} alt='logo google'></img></button>
       </div>
       </body>
       </div>

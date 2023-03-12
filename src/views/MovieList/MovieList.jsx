@@ -46,6 +46,7 @@ export function MoviesList() {
 return(
         <div>  
             <Navbar/>
+            <br />
             <div id="Space"><p>.</p></div>
             <ul className={styles.moviesList}>
                 {movies.map((movie) =>{

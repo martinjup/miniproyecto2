@@ -7,11 +7,18 @@ function MovieCard({movie}){
         
          <li className={styles.movieCard}>
              <Link className="link" to={"/movies/"+ movie.id}>
-            <img width = {230} height = {345} className ={styles.movieImg} src= {imgUrl} alt = {movie.title}/>
-             <div>{movie.title}</div>
+                <img className ={styles.movieImg} src= {imgUrl} alt = {movie.title}/>
+                <div>
+                    {movie.title}<br />
+                    Lenguaje: {movie.original_language}<br />
+                    Popularidad: {movie.popularity}
+                </div>
+
              
              </Link>
+             
              </li>
+             
 
     )
 

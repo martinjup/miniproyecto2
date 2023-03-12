@@ -25,7 +25,6 @@ export function MovieDetails() {
     return(
         <div className={styles.detailsContainer}>
         <Navbar/>
-        
         <img className={`${styles.col} ${styles.movieImage}`} src={imgUrl} alt={movie.title} />
 
         <div className={`${styles.col} ${styles.movieDetails}`}>

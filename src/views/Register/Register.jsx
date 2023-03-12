@@ -1,4 +1,4 @@
-import styles from './Register.css';
+import './Register.css';
 import { Link } from 'react-router-dom';
 import Facebook__logo from '../../img/Facebook-logo.png';
 import Google__logo from '../../img/Google-logo.png';
@@ -12,7 +12,7 @@ export function Register(){
             </div>
             <div className='headerText'>
             <h1>Bienvenido a METROPELIS</h1>
-            <Link id='Link'>¿Ya tienes una cuenta? Iniciar sesion</Link>
+            <Link id='Link' to='/'>¿Ya tienes una cuenta? Iniciar sesion</Link>
             </div>
             
             <form className='box'>

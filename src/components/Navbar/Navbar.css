@@ -20,3 +20,29 @@
 #start{
     margin: 15px;
 }
+
+#logoutButton {
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 8px;
+    text-decoration: none;
+    -webkit-border-radius: 49px;
+    -moz-border-radius: 49px;
+    border-radius: 49px;
+    -webkit-box-shadow: 0px 1px 3px #666666;
+    -moz-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    
+    border: solid #1f6693 5px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#6c6c6c), to(#c3a7b3));
+    background: -moz-linear-gradient(top, #fc3f94, #fc0574);
+    margin-left: 1rem;
+    justify-content: center;
+}
+
+#logoutButton:hover {
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#905fd3), to(#fffcff));
+    background: -moz-linear-gradient(top, #f02df0, #fffcff);
+    color: black;
+}
