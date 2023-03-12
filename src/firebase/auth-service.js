@@ -2,8 +2,8 @@
 
 import { signInWithEmailAndPassword, signInWithPopup, signOut, createUserWithEmailAndPassword } from "firebase/auth"
 import { auth, googleProvider } from "./firebaseConfig"
-import { createUser } from "../controllers/userController"
-import { createDoctor } from "../controllers/doctorController"
+import { createUser } from "../../controllers/userControllers"
+
 
 export const signInWithGoogle = async () => {
     try {
@@ -16,13 +16,7 @@ export const signInWithGoogle = async () => {
 export const registerWithEmail = async (data) => {
     try {
         const result = await createUserWithEmailAndPassword(auth, data.email, data.password)
-        
-        if(data.CIP){
-            createDoctor(data, result.user.uid)
-        }else{
-            createUser(data, result.user.uid)
-        }
-
+        createUser(data, result.user.uid)
     } catch (error) {
         console.log({ error })
     }
