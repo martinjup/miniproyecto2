@@ -10,15 +10,30 @@ import { registerWithEmail, signInWithGoogle } from '../../firebase/auth-service
 
 
 export function Register(props){
-
+    const navigate = useNavigate()
     const handleSigInWtihGoogle = async () => {
-        await signInWithGoogle();
-      }
+        await signInWithGoogle()
+        .then(() => {
+            navigate('/home')
+              alert('Registro exitoso')
+          })
+          
+          .catch(error)
+           alert('Error en autenticacion, intente de nuevo')
+          };
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
     const onSubmit = async (data) =>{
     await registerWithEmail(data)
+    .then(() => {
+        navigate('/home')
+          alert('Registro exitoso')
+      })
+      
+      .catch(error)
+       alert('Error en autenticacion, intente de nuevo')
+      
     }
 
 

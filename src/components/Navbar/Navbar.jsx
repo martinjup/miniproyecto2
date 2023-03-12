@@ -6,11 +6,11 @@ import { useNavigate } from "react-router-dom";
 
 export default function Navbar(){
     const navigate = useNavigate()
-    const handleLogout  = () => {
-        logout()
+    const handleLogout  = async () => {
+        await logout()
           
         .then(() => {
-          navigate('/register')
+          navigate('/')
             alert('Logout exitoso')
         })
         
