@@ -24,6 +24,20 @@ export const Login = () => {
     }
   }, [])
 
+  const provider = new GoogleAuthProvider()
+
+  const signInWithGoogle = () => {
+  signInWithPopup(auth, provider)
+    
+  .then(() => {
+    navigate('/home')
+      alert('Login exitoso')
+  })
+  
+  .catch(error)
+   alert('Error en autenticacion, intente de nuevo')
+  };
+
   return (
     <><div>
       <div id='top'>.</div>
@@ -47,7 +61,7 @@ export const Login = () => {
       </form>
       </div>
       <div className="headboard">
-      <button id="botongoogle"><img id='imggoogle' src={GoogleLogo} alt='logo google'></img></button>
+      <button id="botongoogle" onClick={signInWithGoogle}><img id='imggoogle' src={GoogleLogo} alt='logo google'></img></button>
       </div>
       </body>
       </div>
