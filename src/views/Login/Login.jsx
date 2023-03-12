@@ -28,7 +28,8 @@ export const Login = () => {
       <br></br>
       <body className="square">
       <div className="headboard">
-        <h3>Login</h3>
+        <h3>MetroPelis</h3>
+        <h4>Login</h4>
       </div>
       <div className="headboard">
       <form id="form" onSubmit={handleSubmit}>
@@ -37,14 +38,17 @@ export const Login = () => {
           </div>
           <div>
           <input name="password" placeholder="contraseña" type="password" />
-          <div>
           </div>
+          <div>
           <button type="submit" className='boton'>Login</button>
           </div>
       </form>
       </div>
       <div className="headboard">
       <button className='boton'> Google </button>
+      </div>
+      <div className="headboard">
+      <button className='boton'onClick={()=>navigate('/register')} > Registro </button>
       </div>
       </body>
       </div>
