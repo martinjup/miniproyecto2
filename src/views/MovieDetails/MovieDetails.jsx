@@ -2,6 +2,7 @@ import styles from "./MovieDetails.module.css"
 import {useEffect, useState} from "react";
 import {useParams} from "react-router"
 import {get} from "../../firebase/httpClient";
+import Navbar from "../../components/Navbar/Navbar";
 
 
 
@@ -23,6 +24,7 @@ export function MovieDetails() {
 
     return(
         <div className={styles.detailsContainer}>
+        <Navbar/>
         
         <img className={`${styles.col} ${styles.movieImage}`} src={imgUrl} alt={movie.title} />
 
