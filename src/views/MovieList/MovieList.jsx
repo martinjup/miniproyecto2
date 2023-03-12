@@ -2,7 +2,7 @@ import {useEffect, useState} from "react"
 import MovieCard from "../../components/MovieCard/MovieCard";
 import styles from "./MovieList.module.css";
 import { get } from "../../firebase/httpClient";
-import { Search } from "../../components/Search/Search";
+import Navbar from "../../components/Navbar/Navbar";
 import { Spinner } from "../../components/Spinner/Spinner";
 import { useQuery } from "../../hooks/useQuery";
 import ReactPaginate from "react-paginate";
@@ -45,7 +45,8 @@ export function MoviesList() {
 
 return(
         <div>  
-            <Search/>
+            <Navbar/>
+            <div id="Space"><p>.</p></div>
             <ul className={styles.moviesList}>
                 {movies.map((movie) =>{
                     return(
